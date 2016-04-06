@@ -22,10 +22,10 @@
 
 (defn factorial [n]
   (loop [n     n
-         total nil]
+         total 1]
     (if (= n 1)
       total
-      (recur (dec n) (* n (dec n))))))
+      (recur (dec n) (* n total)))))
 
 (meditations
   "Recursion ends with a base case"
